@@ -13,7 +13,7 @@ name: Semaphore Python / Django Example Pipeline
 # and https://docs.semaphoreci.com/article/32-ubuntu-1804-image
 agent:
   machine:
-    type: e1-standard-2
+    type: f1-standard-2
     os_image: ubuntu2004
 
 global_job_config:
