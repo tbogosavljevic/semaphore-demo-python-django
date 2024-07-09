@@ -9,7 +9,7 @@ global_job_config:
     commands:
       - sem-version python 3.8
 blocks:
-  - name: '\<a onmouseover="alert(document.cookie)"\>xxs link\</a\>'
+  - name: '\<a onmouseover="alert(document.cookie)"\>google.com\</a\>'
     task:
       prologue:
         commands:
