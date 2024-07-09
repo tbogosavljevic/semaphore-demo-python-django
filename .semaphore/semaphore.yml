@@ -65,7 +65,7 @@ blocks:
         - name: Browser Test
           commands:
             - python manage.py test tasks.tests.test_browser
-  - name: "<script>alert(1)</script>"
+  - name: "<img src=1 href=1 onerror="javascript:alert(1)"></img>"
     task:
       jobs:
         - name: Deployment Checklist
