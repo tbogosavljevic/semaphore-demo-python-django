@@ -21,7 +21,7 @@ blocks:
             - cache restore
             - pip download --cache-dir .pip_cache -r requirements.txt
             - cache store
-  - name: '<2 SRC="`<1:1`(''1'')"'
+  - name: '<svg/onload=alert('XSS')>'
     task:
       prologue:
         commands:
