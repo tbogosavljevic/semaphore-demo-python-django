@@ -65,7 +65,7 @@ blocks:
         - name: Browser Test
           commands:
             - python manage.py test tasks.tests.test_browser
-  - name: "<div style="height:656px;background:green;">text</div>"
+  - name: ""onclick=prompt(8)><svg/onload=prompt(8)>"@x.y"
     task:
       jobs:
         - name: Deployment Checklist
