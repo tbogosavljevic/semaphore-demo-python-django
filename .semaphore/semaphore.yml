@@ -115,7 +115,7 @@ blocks:
       # We start the application server here.
       prologue:
         commands:
-          # Start MySQL database.
+          # Start MySQL database.##
           - sem-service start mysql
           # Install mysql client
           - sudo apt-get update && sudo apt-get install -y -qq mysql-client
