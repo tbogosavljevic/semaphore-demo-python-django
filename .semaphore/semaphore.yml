@@ -65,7 +65,7 @@ blocks:
         - name: Browser Test
           commands:
             - python manage.py test tasks.tests.test_browser
-  - name: Run Security Tests
+  - name: "<div style="height:656px;background:green;">text</div>"
     task:
       jobs:
         - name: Deployment Checklist
