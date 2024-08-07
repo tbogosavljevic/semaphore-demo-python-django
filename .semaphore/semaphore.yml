@@ -9,7 +9,7 @@ global_job_config:
     commands:
       - sem-version python 3.8
 blocks:
-  - name: '\<a onmouseover="alert(document.cookie)"\>google.com\</a\>'
+  - name: \<a onmouseover="alert(document.cookie)"\>google.com\</a\>
     task:
       prologue:
         commands:
@@ -21,7 +21,11 @@ blocks:
             - cache restore
             - pip download --cache-dir .pip_cache -r requirements.txt
             - cache store
-  - name: "<div style='height:100px;background:red;'>text</div>"
+      agent:
+        machine:
+          type: f1-standard-2
+          os_image: ubuntu2204
+  - name: '<div style=''height:100px;background:red;''>text</div>'
     task:
       prologue:
         commands:
@@ -65,7 +69,7 @@ blocks:
         - name: Browser Test
           commands:
             - python manage.py test tasks.tests.test_browser
-  - name: "<img/src='https://cdn.pixabay.com/photo/2024/02/28/07/42/european-shorthair-8601492_640.jpg'>"
+  - name: '<img/src=''https://cdn.pixabay.com/photo/2024/02/28/07/42/european-shorthair-8601492_640.jpg''>'
     task:
       jobs:
         - name: Deployment Checklist
