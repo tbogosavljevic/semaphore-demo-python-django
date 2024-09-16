@@ -17,7 +17,7 @@ blocks:
       jobs:
         - name: pip
           commands:
-            - sem version node 22.6.0
+            - sem-version ruby 3.2.4
       agent:
         machine:
           type: f1-standard-2
