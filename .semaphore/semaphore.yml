@@ -17,7 +17,19 @@ blocks:
       jobs:
         - name: pip
           commands:
-            - sem-version ruby 3.2.4
+            - CHROME_VERSION="131.0.6778.139"
+            - echo "Installing Chrome version $CHROME_VERSION..."
+            - '# Download and install Chrome'
+            - 'wget -q https://dl.google.com/linux/chrome/deb/pool/main/g/google-chrome-stable/google-chrome-stable_${CHROME_VERSION}-1_amd64.deb'
+            - 'sudo apt-get install -y --allow-downgrades ./google-chrome-stable_${CHROME_VERSION}-1_amd64.deb'
+            - google-chrome --version
+            - echo "Installing ChromeDriver version $CHROME_VERSION..."
+            - '# Download and install ChromeDriver'
+            - 'wget https://storage.googleapis.com/chrome-for-testing-public/${CHROME_VERSION}/linux64/chromedriver-linux64.zip'
+            - unzip chromedriver-linux64.zip
+            - sudo mv chromedriver-linux64/chromedriver /usr/local/bin/chromedriver
+            - sudo chmod +x /usr/local/bin/chromedriver
+            - chromedriver --version
       agent:
         machine:
           type: f1-standard-2
